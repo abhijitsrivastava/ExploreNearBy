@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2014 COEverywhere. All rights reserved.
+  -->
+
+<trigger keyword="@string/open_app" />

@@ -1,0 +1,70 @@
+# Add project specific ProGuard rules here.
+# By default, the flags in this file are appended to flags specified
+# in /Applications/Android Studio.app/sdk/tools/proguard/proguard-android.txt
+# You can edit the include path and order by changing the ProGuard
+# include property in project.properties.
+#
+# For more details, see
+#   http://developer.android.com/guide/developing/tools/proguard.html
+
+# Add any project specific keep options here:
+
+# If your project uses WebView with JS, uncomment the following
+# and specify the fully qualified class name to the JavaScript interface
+# class:
+#-keepclassmembers class fqcn.of.javascript.interface.for.webview {
+#   public *;
+#}
+
+##########################
+# Necessary for Retrofit #
+##########################
+-keep class com.google.gson.** { *; }
+-keep class com.google.inject.** { *; }
+-keep class org.apache.http.** { *; }
+-keep class javax.inject.** { *; }
+-keep class retrofit.** { *; }
+
+#############################
+# Necessary for Butterknife #
+#############################
+-dontwarn butterknife.internal.**
+-keep class **$$ViewInjector { *; }
+-keepnames class * { @butterknife.InjectView *;}
+
+##############################
+# Necessary for Support Libs #
+##############################
+# support-v4
+-dontwarn android.support.v4.**
+-keep class android.support.v4.app.** { *; }
+-keep interface android.support.v4.app.** { *; }
+
+-keep class com.google.android.glass.touchpad.** { *; }
+
+
+#####################
+# Suppress Warnings #
+#####################
+-dontwarn rx.**
+-dontwarn retrofit.**
+-dontwarn com.squareup.okhttp.internal.**
+-dontwarn com.squareup.okhttp.**
+
+
+-keepnames class * implements android.os.Parcelable {
+    public static final ** CREATOR;
+}
+
+-keepattributes SourceFile,LineNumberTable
+
+
+#########
+# Guava #
+#########
+
+-dontoptimize
+-dontobfuscate
+-dontwarn javax.annotation.**
+-dontwarn javax.inject.**
+-dontwarn sun.misc.Unsafe

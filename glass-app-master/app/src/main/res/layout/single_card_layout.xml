@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--
+  ~ Copyright (c) 2014 COEverywhere. All rights reserved.
+  -->
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/keep_exploring_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/keep_exploring_text"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_centerInParent="true"
+            android:text="@string/keep_exploring"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <!-- Story Content -->
+    <RelativeLayout
+        android:id="@+id/left_column"
+        android:layout_width="@dimen/glass_card_left_column_width"
+        android:layout_height="match_parent">
+
+        <!-- Put widgets for the left column inside this RelativeLayout. -->
+        <ImageView
+            android:id="@+id/image"
+            android:contentDescription="@string/default_image_content"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+        <!--android:scaleType="fitXY"-->
+
+        <ProgressBar
+            android:id="@+id/image_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:indeterminate="true"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content_wrapper"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginLeft="@dimen/glass_card_two_column_margin"
+        android:layout_marginRight="@dimen/glass_card_margin"
+        android:layout_toRightOf="@+id/left_column"
+        tools:ignore="UselessLeaf">
+        <!--android:layout_height="@dimen/glass_card_body_height"-->
+        <!--android:layout_marginTop="@dimen/glass_card_margin"-->
+
+        <!-- Put widgets for the right column inside this RelativeLayout. -->
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:maxLines="4"
+            android:ellipsize="end" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/footer_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_gravity="bottom|left"
+        android:layout_marginLeft="@dimen/glass_card_two_column_margin"
+        android:layout_marginRight="@dimen/glass_card_margin"
+        android:layout_toRightOf="@+id/left_column"
+        android:layout_below="@+id/content_wrapper"
+        android:orientation="vertical">
+        <!--android:layout_marginBottom="@dimen/glass_card_footer_margin"-->
+        <!--
+             The footer view will grow to fit as much content as possible while the
+             timestamp view keeps a fixed width. If the footer text is too long, it
+             will be ellipsized with a 40px margin between it and the timestamp.
+        -->
+
+        <LinearLayout
+            android:id="@+id/user_wrapper"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/pin_wrapper"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp">
+
+            <ImageView
+                android:id="@+id/user_avatar"
+                android:contentDescription="@string/default_image_content"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:src="@drawable/img_profile_blank_avatar" />
+
+            <TextView
+                android:id="@+id/user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:singleLine="true"
+                android:maxLines="1"
+                android:paddingLeft="8dp"
+                android:textAppearance="?android:attr/textAppearanceSmall"
+                android:ellipsize="end"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/pin_wrapper"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_above="@+id/status_wrapper"
+            android:layout_marginTop="3dp"
+            android:layout_marginBottom="0dp"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp"
+            android:visibility="gone">
+
+            <ImageView
+                android:contentDescription="@string/default_image_content"
+                android:layout_width="13dp"
+                android:layout_height="13dp"
+                android:layout_gravity="center_vertical"
+                android:src="@drawable/ic_small_map_marker_grey"/>
+
+            <TextView
+                android:id="@+id/pin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_marginLeft="2dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/status_wrapper"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:paddingLeft="3dp"
+            android:paddingRight="3dp">
+
+            <LinearLayout
+                android:orientation="horizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1">
+
+                <TextView
+                    android:id="@+id/footer"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:singleLine="true"
+                    android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            </LinearLayout>
+            <!--android:layout_marginLeft="@dimen/glass_card_margin"-->
+            <TextView
+                android:id="@+id/timestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:ellipsize="end"
+                android:singleLine="true"
+                android:textAppearance="?android:attr/textAppearanceSmall"/>
+
+            <ImageView
+                android:id="@+id/attribution_image"
+                android:layout_width="15dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="15dp"
+                android:layout_gravity="center_vertical"
+                android:contentDescription="@string/default_image_content"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

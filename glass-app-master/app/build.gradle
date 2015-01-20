@@ -1,0 +1,63 @@
+apply plugin: 'android'
+
+
+def versionMajor = 0
+def versionMinor = 1
+def versionPatch = 0
+def versionBuild = 0
+def releaseCandidateVersion = 0
+
+
+android {
+    compileSdkVersion 19
+    buildToolsVersion "21.1.1"
+
+    defaultConfig {
+        minSdkVersion 19
+        targetSdkVersion 19
+
+        versionCode versionMajor * 10000 + versionMinor * 1000 + versionPatch * 100 + versionBuild
+        versionName "${versionMajor}.${versionMinor}" + ((versionPatch != 0) ? ".${versionPatch}" : "")
+    }
+
+    signingConfigs {
+        debug {
+            storeFile file("../keystore/debug/debug.keystore")
+            storePassword "coeverywhere"
+            keyAlias "coglassdebug"
+            keyPassword "coeverywhere"
+        }
+        release {
+            storeFile file("../keystore/release/release.keystore")
+            storePassword "XXX"
+            keyAlias "coglass"
+            keyPassword "XXX"
+        }
+    }
+
+    buildTypes {
+        debug {
+            minifyEnabled false
+            signingConfig signingConfigs.debug
+        }
+        release {
+            minifyEnabled true
+            signingConfig signingConfigs.release
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.txt'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:19.+'
+    compile 'com.android.support:support-v4:+'
+
+    compile 'com.squareup.picasso:picasso:2.2.+'
+    compile 'com.squareup.okhttp:okhttp:1.5.+'
+    compile 'com.squareup.retrofit:retrofit:1.5.+'
+    compile 'com.jakewharton.timber:timber:2.1.+'
+    compile 'com.jakewharton:butterknife:4.0.+'
+
+    compile 'com.google.guava:guava:17.0'
+}

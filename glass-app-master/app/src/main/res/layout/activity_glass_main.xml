@@ -1,0 +1,88 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_height="match_parent"
+    android:layout_width="match_parent"
+    android:keepScreenOn="true"
+    tools:context="com.coeverywhere.glass.activity.GlassMain">
+
+    <RelativeLayout
+        android:id="@+id/loading_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/co_icon"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:layout_marginTop="10dp"
+            android:contentDescription="@string/default_image_content"
+            android:src="@drawable/co_stacked_logo" />
+
+        <ProgressBar
+            style="?android:progressBarStyleSmall"
+            android:id="@+id/enabled_progress"
+            android:layout_below="@+id/co_icon"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:indeterminate="true" />
+
+        <TextView
+            android:id="@+id/preview_text"
+            android:layout_below="@+id/enabled_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textAppearance="?android:attr/textAppearanceSmall"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="8dp"
+            android:text="@string/locate_device_string"
+            android:visibility="visible" />
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/content_wrapper"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone">
+
+        <com.coeverywhere.glass.activity.ui.CompassView
+            android:id="@+id/compass_view"
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_alignParentTop="true"
+            android:visibility="gone"/>
+
+        <ProgressBar
+            android:id="@+id/loading_progress"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_centerInParent="true"
+            android:indeterminate="true" />
+
+        <TextView
+            android:id="@+id/no_content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="@string/no_nearby_content"
+            android:visibility="gone" />
+
+        <!--<com.google.android.glass.widget.CardScrollView
+            android:id="@+id/nearby_list_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_above="@+id/compass_view"
+            android:visibility="gone"/>-->
+        <include
+            android:id="@+id/story_layout"
+            layout="@layout/single_card_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@+id/compass_view" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
