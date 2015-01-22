@@ -65,6 +65,8 @@ import retrofit.client.Response;
 import timber.log.Timber;
 
 import com.google.android.glass.media.Sounds;
+import com.w9jds.gdk_progress_widget.SliderView;
+
 import android.media.AudioManager;
 
 
@@ -105,7 +107,9 @@ public class GlassMain extends Activity {
     public @InjectView(R.id.no_content) TextView noContent; // no_content
 
     public @InjectView(R.id.preview_text) TextView previewText; // preview_text
-    public @InjectView(R.id.enabled_progress) ProgressBar enableProgress;
+
+    //public @InjectView(R.id.enabled_progress) ProgressBar enableProgress;
+    public @InjectView(R.id.indeterm_slider) SliderView mSliderView;
 
     private static final double LEFT_THRESHOLD = 2.5, RIGHT_THRESHOLD = -2.5;
     private static final float RADIUS_STRETCH = 2.5f;
@@ -163,6 +167,7 @@ public class GlassMain extends Activity {
         }
         mCompassView.setOrientationManager(mOrientationManager);
         viewHolder = new ItemViewHolder(storyLayoutRoot);
+        mSliderView.startIndeterminate();
     }
 
     @Override
@@ -299,7 +304,8 @@ public class GlassMain extends Activity {
                 nearbyController.bootstrapNearby(String.valueOf(longitude), String.valueOf(latitude), bootstrapNearby);
 
                 String text = nearbyEnabledResponseBaseSingleResponse.getResult().getSummary();
-                enableProgress.setVisibility(View.GONE);
+                //enableProgress.setVisibility(View.GONE);
+                mSliderView.setVisibility(View.GONE);
                 previewText.setVisibility(View.VISIBLE);
                 previewText.setText(text);
                 loadingWrapper.animate()
@@ -312,7 +318,8 @@ public class GlassMain extends Activity {
                             }
                             @Override
                             public void onAnimationEnd(Animator animator) {
-                                enableProgress.setVisibility(View.VISIBLE);
+                                //enableProgress.setVisibility(View.VISIBLE);
+                                mSliderView.setVisibility(View.VISIBLE);
                                 previewText.setVisibility(View.GONE);
                                 loadingWrapper.setVisibility(View.GONE);
                                 loadingWrapper.setAlpha(1f);
@@ -328,7 +335,8 @@ public class GlassMain extends Activity {
                             }
                         }).start();
             } else {
-                enableProgress.setVisibility(View.VISIBLE);
+                //enableProgress.setVisibility(View.VISIBLE);
+                mSliderView.setVisibility(View.VISIBLE);
                 previewText.setVisibility(View.GONE);
                 loadingWrapper.setVisibility(View.GONE);
                 loadingWrapper.setAlpha(1f);
@@ -339,7 +347,8 @@ public class GlassMain extends Activity {
         @Override
         public void failure(RetrofitError error) {
             Timber.e(error, "Error enabling nearby");
-            enableProgress.setVisibility(View.VISIBLE);
+            //enableProgress.setVisibility(View.VISIBLE);
+            mSliderView.setVisibility(View.VISIBLE);
             previewText.setVisibility(View.GONE);
             loadingWrapper.setVisibility(View.GONE);
             loadingWrapper.setAlpha(1f);
@@ -421,7 +430,8 @@ public class GlassMain extends Activity {
                 }
 
                 String text = String.format(getResources().getString(R.string.cards_count_string), String.valueOf(cards.size()), furthestCard);
-                enableProgress.setVisibility(View.GONE);
+                //enableProgress.setVisibility(View.GONE);
+                mSliderView.setVisibility(View.GONE);
                 previewText.setVisibility(View.VISIBLE);
                 previewText.setText(text);
                 loadingWrapper.animate()
@@ -434,7 +444,8 @@ public class GlassMain extends Activity {
                             }
                             @Override
                             public void onAnimationEnd(Animator animator) {
-                                enableProgress.setVisibility(View.VISIBLE);
+                                //enableProgress.setVisibility(View.VISIBLE);
+                                mSliderView.setVisibility(View.VISIBLE);
                                 previewText.setVisibility(View.GONE);
                                 loadingWrapper.setVisibility(View.GONE);
                                 loadingWrapper.setAlpha(1f);
@@ -463,7 +474,8 @@ public class GlassMain extends Activity {
                 /*loadingProgress.setVisibility(View.GONE);
                 mCompassView.setVisibility(View.GONE);
                 noContent.setVisibility(View.VISIBLE);*/
-                enableProgress.setVisibility(View.VISIBLE);
+                //enableProgress.setVisibility(View.VISIBLE);
+                mSliderView.setVisibility(View.VISIBLE);
                 previewText.setVisibility(View.GONE);
                 loadingWrapper.setVisibility(View.GONE);
                 loadingWrapper.setAlpha(1f);

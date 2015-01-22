@@ -19,18 +19,18 @@
             android:contentDescription="@string/default_image_content"
             android:src="@drawable/co_stacked_logo" />
 
-        <ProgressBar
+       <!-- <ProgressBar
             style="?android:progressBarStyleSmall"
             android:id="@+id/enabled_progress"
             android:layout_below="@+id/co_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_centerHorizontal="true"
-            android:indeterminate="true" />
+            android:indeterminate="true" />-->
 
         <TextView
             android:id="@+id/preview_text"
-            android:layout_below="@+id/enabled_progress"
+            android:layout_below="@+id/co_icon"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textAppearance="?android:attr/textAppearanceSmall"
@@ -38,6 +38,13 @@
             android:layout_marginTop="8dp"
             android:text="@string/locate_device_string"
             android:visibility="visible" />
+
+        <com.w9jds.gdk_progress_widget.SliderView
+            android:id="@+id/indeterm_slider"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            />
 
     </RelativeLayout>
 

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- From: file:/home/qainfotech/gitjni/glass-app-master/libraries/GDK-ProgressBar/src/main/res/values/dimens.xml -->
+    <eat-comment/>
+    <dimen name="card_generic_padding">40.0px</dimen>
+    <dimen name="menu_icon_margin">20.0px</dimen>
+    <dimen name="menu_icon_size">50.0px</dimen>
+    <dimen name="menu_text_size">70.0px</dimen>
+    <dimen name="slider_bar_height">12.0px</dimen>
+    <!-- From: file:/home/qainfotech/gitjni/glass-app-master/libraries/GDK-ProgressBar/src/main/res/values/ids.xml -->
+    <eat-comment/>
+    <item name="icon" type="id">false</item>
+    <item name="indeterminate_slider" type="id">false</item>
+    <item name="label" type="id">false</item>
+    <item name="slider" type="id">false</item>
+    <item name="slider_control" type="id">false</item>
+    <!-- From: file:/home/qainfotech/gitjni/glass-app-master/libraries/GDK-ProgressBar/src/main/res/values/integers.xml -->
+    <eat-comment/>
+    <integer name="horizontal_scroll_deferred_load_animation_duration_ms">200</integer>
+    <integer name="horizontal_scroll_deferred_sizing_animation_duration_ms">50</integer>
+    <integer name="slider_in_out_animation_duration_ms">300</integer>
+</resources>

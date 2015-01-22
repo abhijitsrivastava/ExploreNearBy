@@ -2,53 +2,11 @@
 <items version="2" >
 
     <item
-        jar="/home/qainfotech/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.2.0/74137f8d9aac26dd9463efe32271f2be8d41cda9/picasso-2.2.0.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="74137f8d9aac26dd9463efe32271f2be8d41cda9">
-        <dex dex="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/pre-dexed/debug/picasso-2.2.0-6d225d5d97ee0dd0334ba70e8b391bf1a97f3e00.jar" />
-    </item>
-    <item
-        jar="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
-        <dex dex="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/pre-dexed/debug/classes-e0cea0cc96e3082d8bacae2710d001e6314c2a68.jar" />
-    </item>
-    <item
-        jar="/home/qainfotech/Downloads/adt-bundle-linux-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
-        <dex dex="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-6ad559747fb248ad5e06aed2ce1f6dcc20cae87e.jar" />
-    </item>
-    <item
-        jar="/home/qainfotech/.gradle/caches/modules-2/files-2.1/com.jakewharton.timber/timber/2.1.0/6fb30d44a1690f77d93372e1da75c4a55072d725/timber-2.1.0.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="6fb30d44a1690f77d93372e1da75c4a55072d725">
-        <dex dex="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/pre-dexed/debug/timber-2.1.0-d1ba598c14c9f845f60bb8aa6e84336337fdf852.jar" />
-    </item>
-    <item
-        jar="/home/qainfotech/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/4.0.1/f43b36925363701633d01adb8e54df7150397a78/butterknife-4.0.1.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="f43b36925363701633d01adb8e54df7150397a78">
-        <dex dex="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/pre-dexed/debug/butterknife-4.0.1-863d5a5678203c153380e5ebad12f7701a1a581b.jar" />
-    </item>
-    <item
         jar="/home/qainfotech/gitjni/glass-app-master/app/libs/gdk.jar"
         jumboMode="false"
         revision="21.1.1"
         sha1="060d3cca3374185fb02d8c10e0760d81e9fd5472">
         <dex dex="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/pre-dexed/debug/gdk-a5db7b3f3fb5cecd1ca7603c3626d63ca0353f95.jar" />
-    </item>
-    <item
-        jar="/home/qainfotech/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/1.5.4/7b7c9e5a6a0d69a1571968805dc1d1f19b57da26/okhttp-1.5.4.jar"
-        jumboMode="false"
-        revision="21.1.1"
-        sha1="7b7c9e5a6a0d69a1571968805dc1d1f19b57da26">
-        <dex dex="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/pre-dexed/debug/okhttp-1.5.4-8b9ebb1aea39d0ab7fb7383366eafead807fff85.jar" />
     </item>
     <item
         jar="/home/qainfotech/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit/retrofit/1.5.1/266695d62b6df0e1176af2be3634bcd0837d4fbd/retrofit-1.5.1.jar"
@@ -84,6 +42,55 @@
         revision="21.1.1"
         sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
         <dex dex="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/pre-dexed/debug/classes-ea90f39e0f6b274ccd26eefbd9f835bdcf12fce4.jar" />
+    </item>
+    <item
+        jar="/home/qainfotech/.gradle/caches/modules-2/files-2.1/com.squareup.picasso/picasso/2.2.0/74137f8d9aac26dd9463efe32271f2be8d41cda9/picasso-2.2.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="74137f8d9aac26dd9463efe32271f2be8d41cda9">
+        <dex dex="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/pre-dexed/debug/picasso-2.2.0-6d225d5d97ee0dd0334ba70e8b391bf1a97f3e00.jar" />
+    </item>
+    <item
+        jar="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/19.1.0/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="3499ceba05ca1f6037c6a2fad73df8f636224a28">
+        <dex dex="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/pre-dexed/debug/classes-e0cea0cc96e3082d8bacae2710d001e6314c2a68.jar" />
+    </item>
+    <item
+        jar="/home/qainfotech/.gradle/caches/modules-2/files-2.1/com.jakewharton.timber/timber/2.1.0/6fb30d44a1690f77d93372e1da75c4a55072d725/timber-2.1.0.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="6fb30d44a1690f77d93372e1da75c4a55072d725">
+        <dex dex="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/pre-dexed/debug/timber-2.1.0-d1ba598c14c9f845f60bb8aa6e84336337fdf852.jar" />
+    </item>
+    <item
+        jar="/home/qainfotech/Downloads/adt-bundle-linux-x86_64-20140702/sdk/extras/android/m2repository/com/android/support/support-annotations/21.0.3/support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/pre-dexed/debug/support-annotations-21.0.3-6ad559747fb248ad5e06aed2ce1f6dcc20cae87e.jar" />
+    </item>
+    <item
+        jar="/home/qainfotech/.gradle/caches/modules-2/files-2.1/com.jakewharton/butterknife/4.0.1/f43b36925363701633d01adb8e54df7150397a78/butterknife-4.0.1.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="f43b36925363701633d01adb8e54df7150397a78">
+        <dex dex="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/pre-dexed/debug/butterknife-4.0.1-863d5a5678203c153380e5ebad12f7701a1a581b.jar" />
+    </item>
+    <item
+        jar="/home/qainfotech/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp/okhttp/1.5.4/7b7c9e5a6a0d69a1571968805dc1d1f19b57da26/okhttp-1.5.4.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="7b7c9e5a6a0d69a1571968805dc1d1f19b57da26">
+        <dex dex="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/pre-dexed/debug/okhttp-1.5.4-8b9ebb1aea39d0ab7fb7383366eafead807fff85.jar" />
+    </item>
+    <item
+        jar="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/exploded-aar/glass-app-master.libraries/GDK-ProgressBar/unspecified/classes.jar"
+        jumboMode="false"
+        revision="21.1.1"
+        sha1="a79085d7b958aee82e29c2c3af33205d6a27382c">
+        <dex dex="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/pre-dexed/debug/classes-8d521c72dacf3e168e10b3c92dad77005816137d.jar" />
     </item>
 
 </items>
