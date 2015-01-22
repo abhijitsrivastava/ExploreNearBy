@@ -49,7 +49,13 @@ public class StoryAdapter extends ArrayAdapter<StoriesModel> {
             viewHolder = (StoryViewHolder) convertView.getTag();
         }
 
-        viewHolder.content.setText(model.getContent());
+        String fullContent = model.getContent();
+        String shortContent = model.getContent();
+
+        if (fullContent.length() > 16){
+            shortContent =fullContent.substring(0,16) ;
+        }
+        viewHolder.content.setText(shortContent);
         Picasso.with(context)
                 .load(model.getAttachedImageThumb())
                 .into(viewHolder.image);

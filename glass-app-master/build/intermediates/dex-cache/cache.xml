@@ -89,7 +89,7 @@
         jar="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/exploded-aar/glass-app-master.libraries/GDK-ProgressBar/unspecified/classes.jar"
         jumboMode="false"
         revision="21.1.1"
-        sha1="a79085d7b958aee82e29c2c3af33205d6a27382c">
+        sha1="af5034a873f91d14606e364eae55454130f68872">
         <dex dex="/home/qainfotech/gitjni/glass-app-master/app/build/intermediates/pre-dexed/debug/classes-8d521c72dacf3e168e10b3c92dad77005816137d.jar" />
     </item>
 

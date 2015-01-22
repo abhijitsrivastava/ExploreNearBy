@@ -36,7 +36,8 @@
             android:id="@+id/image"
             android:contentDescription="@string/default_image_content"
             android:layout_width="match_parent"
-            android:layout_height="match_parent" />
+            android:layout_centerVertical="true"
+            android:layout_height="280dp" />
         <!--android:scaleType="fitXY"-->
 
         <ProgressBar
@@ -66,7 +67,9 @@
             android:id="@+id/content"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:maxLines="4"
+            android:maxLines="2"
+            android:textSize="50px"
+            android:textColor="#FFFFFF"
             android:ellipsize="end" />
 
     </RelativeLayout>
@@ -114,6 +117,7 @@
                 android:singleLine="true"
                 android:maxLines="1"
                 android:paddingLeft="8dp"
+                android:textSize="26px"
                 android:textAppearance="?android:attr/textAppearanceSmall"
                 android:ellipsize="end"/>
 
@@ -146,6 +150,7 @@
                 android:layout_marginLeft="2dp"
                 android:ellipsize="end"
                 android:maxLines="1"
+                android:textSize="26px"
                 android:singleLine="true"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 
@@ -172,6 +177,7 @@
                     android:layout_height="wrap_content"
                     android:ellipsize="end"
                     android:singleLine="true"
+                    android:textSize="26px"
                     android:textAppearance="?android:attr/textAppearanceSmall"/>
 
             </LinearLayout>
@@ -183,6 +189,7 @@
                 android:layout_marginLeft="15dp"
                 android:ellipsize="end"
                 android:singleLine="true"
+                android:textSize="26px"
                 android:textAppearance="?android:attr/textAppearanceSmall"/>
 
             <ImageView

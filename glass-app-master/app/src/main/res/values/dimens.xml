@@ -20,6 +20,6 @@
     <dimen name="glass_card_body_height">220px</dimen>
 
     <!-- The width of the left column in the two-column layout. -->
-    <dimen name="glass_card_left_column_width">240px</dimen>
+    <dimen name="glass_card_left_column_width">280px</dimen>
 
 </resources>
